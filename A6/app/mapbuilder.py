@@ -95,7 +95,7 @@ class MapBuilder (object):
     
     def placeWallLogic(self, mapdata, x, y):
         numWalls = self.getAdjacentWalls(x,y,1,1)
-        if self.mapdata[self.ctoi(x,y)] == 1:
+        if self.mapdata[self.ctoi(x, y)] == 1:
             if numWalls >= 4:
                 return 1
             if numWalls < 2:
@@ -132,15 +132,6 @@ if __name__ == "__main__":
     width = 50
     height = 30
     c = MapBuilder()
-    newmap = c.generateCaverns(width,height, 2, 55, 2, 2)
+    newmap = c.generate(width, height, 2, 54, 2, 2)
     print str(newmap)
-
-
-
-
-                
-
-
-        
-
-    
+    print newmap.mapdata

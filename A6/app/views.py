@@ -93,6 +93,7 @@ def solve():
         path = find(generatedmap.mapdata, 
                 generatedmap.width, 
                 generatedmap.height, [sx, sy], [dx,dy])
+        print(json.dumps(path))
         return json.dumps(path)
 
     return "[]"
